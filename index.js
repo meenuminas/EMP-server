@@ -1,7 +1,8 @@
 const jsonServer=require('json-server')
 const empServer=jsonServer.create()
 const middleware =jsonServer.defaults()
-const router = 3000|| process.env.PORT
+const router=jsonServer.router("db.json")
+const PORT = 3000|| process.env.PORT
 
 empServer.use(middleware)
 empServer.use(router)
